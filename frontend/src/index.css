@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-100 text-ink-800 antialiased;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  background-image:
+    radial-gradient(ellipse 70% 45% at 12% -8%, rgba(61, 131, 119, 0.07), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(84, 95, 111, 0.06), transparent);
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: rgba(61, 131, 119, 0.20);
+  color: #17301c;
+}
+
+/* Slim, unobtrusive scrollbars for a more polished feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #C2C9D3;
+  border-radius: 9999px;
+  border: 2px solid #EEF1F4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9BA4B2;
+}
+
+/* Consistent, calmer focus ring across native form controls */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+.font-display {
+  font-feature-settings: "ss01", "liga";
+  letter-spacing: -0.01em;
+}

@@ -1,0 +1,5 @@
+Place face-api.js tiny_face_detector and face_expression model weight files here (download from https://github.com/justadudewhohacks/face-api.js-models).
+
+Also place the face_landmark_68_tiny model weights here (same source repo, "face_landmark_68_tiny" folder contents). This powers the gaze-tracking proctoring check (suspicious gaze pattern detection). It's loaded best-effort: if these files are missing, multi-face detection and facial expression sampling still work fine — only the gaze-direction check is disabled.
+
+Also place the age_gender_model weights here (same source repo, "age_gender_model" folder contents). This powers the optional identity-mismatch proctoring signal: if a recruiter records an expected gender when scheduling an interview, an aggregated on-camera estimate is compared against it at report time and, when they disagree consistently, a "please have a human verify" flag is raised on the final report. It never scores, blocks, or auto-terminates a candidate. Also loaded best-effort — if these files are missing, this one signal is simply skipped and no flag is ever raised.
